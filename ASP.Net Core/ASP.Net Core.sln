@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08-EFCore", "08-EFCore", "{738B107A-55D5-495B-8E91-777EDA0F55CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-基本使用", "01-基本使用\01-基本使用.csproj", "{02890788-8340-415C-B57F-FB0750E39452}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-组织结构树", "02-组织结构树\02-组织结构树.csproj", "{AA7EAAE2-8240-4AB3-BA84-436C3ECFC291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02890788-8340-415C-B57F-FB0750E39452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02890788-8340-415C-B57F-FB0750E39452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02890788-8340-415C-B57F-FB0750E39452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02890788-8340-415C-B57F-FB0750E39452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7EAAE2-8240-4AB3-BA84-436C3ECFC291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7EAAE2-8240-4AB3-BA84-436C3ECFC291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7EAAE2-8240-4AB3-BA84-436C3ECFC291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7EAAE2-8240-4AB3-BA84-436C3ECFC291}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02890788-8340-415C-B57F-FB0750E39452} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
+		{AA7EAAE2-8240-4AB3-BA84-436C3ECFC291} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ED826D4-EB60-47AD-A98C-2F54BF6CCA93}
+	EndGlobalSection
+EndGlobal
