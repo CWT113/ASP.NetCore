@@ -40,15 +40,15 @@ namespace _04_多对多
             #endregion
 
             #region 查询数据
-            var teachers = ctx.Teachers.Include(d => d.Students);
-            foreach (Teacher teacher in teachers)
-            {
-                Console.WriteLine(teacher.Name);
-                foreach (Student item in teacher.Students)
-                {
-                    Console.WriteLine(new string('\t',1) + item.Name);
-                }
-            }
+            //var teachers = ctx.Teachers.Include(d => d.Students);
+            //foreach (Teacher teacher in teachers)
+            //{
+            //    Console.WriteLine(teacher.Name);
+            //    foreach (Student item in teacher.Students)
+            //    {
+            //        Console.WriteLine(new string('\t',1) + item.Name);
+            //    }
+            //}
             #endregion
         }
     }
