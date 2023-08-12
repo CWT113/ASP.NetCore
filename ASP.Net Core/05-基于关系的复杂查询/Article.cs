@@ -13,6 +13,8 @@ namespace _05_基于关系的复杂查询
         public string Title { get; set; }
         public string Message { get; set; }
 
+        public double Price { get; set; }
+
         public List<Comment> comments { get; set; } = new List<Comment>();
     }
 }
