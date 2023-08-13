@@ -9,13 +9,40 @@ namespace _06_分页查询
         /// </summary>
         static async Task Main(string[] args)
         {
-            // 1、执行非查询语句之外的所有语句：ExecuteSqlInterpolatedAsync()
-            int index = 11;
-            string str = "hello,boy";
-
             using MyDbContext ctx = new MyDbContext();
-            await ctx.Database.ExecuteSqlInterpolatedAsync(
-                $"insert into T_Articles(Title, Message, Price) select Title, {str}, Price from T_Articles where Id = {index}");
+            // 1、执行非查询语句之外的所有语句：ExecuteSqlInterpolatedAsync()
+            //int index = 11;
+            //string str = "hello,boy";
+
+            //await ctx.Database.ExecuteSqlInterpolatedAsync(
+            //    $"insert into T_Articles(Title, Message, Price) select Title, {str}, Price from T_Articles where Id = {index}");
+
+            // 2、执行查询语句
+            //string name = "%一%";
+            //IQueryable<Article> res = ctx.Articles.FromSqlInterpolated($"select * from T_Articles where title like {name} order by newId()");
+            //foreach (Article item in res)
+            //{
+            //    Console.WriteLine(item.Title);
+            //}
+
+            // 3、查询语句的链式调用
+            //string name = "%一%";
+            //IQueryable<Article> res = ctx.Articles
+            //    .FromSqlInterpolated($"select * from T_Articles where title like {name}");
+            //IQueryable<Article> items = res
+            //    .Include(d => d.comments)
+            //    .OrderBy(d => Guid.NewGuid())
+            //    .Skip(1)
+            //    .Take(2);
+
+            //foreach (Article item in items)
+            //{
+            //    Console.WriteLine(item.Title);
+            //    foreach (Comment i in item.comments)
+            //    {
+            //        Console.WriteLine(i.Message);
+            //    }
+            //}
         }
 
         static async Task Main1(string[] args)
