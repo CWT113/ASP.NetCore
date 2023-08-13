@@ -5,6 +5,25 @@
         static void Main(string[] args)
         {
             PriatPage(1, 3);
+            using MyDbContext ctx = new MyDbContext();
+
+            // 1、IQueryable分批从数据库读取数据；（内存占用小，数据库连接时间长）
+            IQueryable<Article> res = ctx.Articles.Where(d => d.Id > 0);
+
+            foreach (Article item in res)
+            {
+                Console.WriteLine(item.Title);
+                Thread.Sleep(10);
+            }
+
+            // 2、IQueryable从数据库读取所有数据，放置内容中，再进行遍历。（内存占用大，数据库连接时间短）
+            var res1 = ctx.Articles.Where(d => d.Id > 0).ToArray();
+
+            foreach (Article item in res1)
+            {
+                Console.WriteLine(item.Title);
+                Thread.Sleep(10);
+            }
         }
 
         /// <summary>
