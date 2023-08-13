@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-一对一", "03-一对�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-多对多", "04-多对多\04-多对多.csproj", "{1966B92D-CB10-4669-AD24-01B3D29BD0DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-基于关系的复杂查询", "05-基于关系的复杂查询\05-基于关系的复杂查询.csproj", "{98D02A28-83B2-43AD-9340-082FDD64E149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-基于关系的复杂查询", "05-基于关系的复杂查询\05-基于关系的复杂查询.csproj", "{98D02A28-83B2-43AD-9340-082FDD64E149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-分页查询", "06-分页查询\06-分页查询.csproj", "{F1E9E191-532B-4A11-9A10-C13D7CC5857E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{98D02A28-83B2-43AD-9340-082FDD64E149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98D02A28-83B2-43AD-9340-082FDD64E149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98D02A28-83B2-43AD-9340-082FDD64E149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E9E191-532B-4A11-9A10-C13D7CC5857E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E9E191-532B-4A11-9A10-C13D7CC5857E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E9E191-532B-4A11-9A10-C13D7CC5857E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E9E191-532B-4A11-9A10-C13D7CC5857E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{6EE41060-5A36-44AB-A243-DBC3957BF687} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
 		{1966B92D-CB10-4669-AD24-01B3D29BD0DC} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
 		{98D02A28-83B2-43AD-9340-082FDD64E149} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
+		{F1E9E191-532B-4A11-9A10-C13D7CC5857E} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4ED826D4-EB60-47AD-A98C-2F54BF6CCA93}
