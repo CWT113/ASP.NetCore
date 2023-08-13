@@ -58,7 +58,7 @@ namespace _02_组织结构树
             {
                 Console.WriteLine(new string('\t', indetLevel) + child.Name);
                 //递归打印子节点
-                //PaintChildrens(indetLevel, ctx, child);
+                PaintChildrens(indetLevel, ctx, child);
             }
         }
     }

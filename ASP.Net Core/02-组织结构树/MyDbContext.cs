@@ -16,8 +16,9 @@ namespace _01_基本使用
         {
             base.OnConfiguring(optionsBuilder);
             //配置连接字符串
+            //修复问题：MultipleActiveResultSets=true; 让ADO.NET Core 支持多个 DateRender
             string connectionString = 
-                "Data Source=LENOVO\\SQLSERVER;Initial Catalog=EF Core;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+                "Data Source=LENOVO\\SQLSERVER;Initial Catalog=EF Core;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;MultipleActiveResultSets=true;";
             optionsBuilder.UseSqlServer(connectionString);
 
             //打印日志
