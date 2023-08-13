@@ -1,13 +1,56 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Data.Common;
+using Dapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace _06_分页查询
 {
     internal class Program
     {
         /// <summary>
-        /// EF Core的非查询语句
+        /// 执行任何纯原生的sql语句
         /// </summary>
         static async Task Main(string[] args)
+        {
+            #region 直接通过ADO.NET执行原生sql语句
+            //using MyDbContext ctx = new MyDbContext();
+            ////拿到ctx对应的底层Connection
+            //DbConnection con = ctx.Database.GetDbConnection();
+            ////判断连接是否打开
+            //if (con.State != System.Data.ConnectionState.Open)
+            //{
+            //    await con.OpenAsync();
+            //}
+            //using (DbCommand cmd = con.CreateCommand())
+            //{
+            //    cmd.CommandText = "select Price,Count(*) from T_Articles group by Price";
+            //    using (DbDataReader render = await cmd.ExecuteReaderAsync())
+            //    {
+            //        while (await render.ReadAsync())
+            //        {
+            //            double price = render.GetDouble(0);
+            //            int count = render.GetInt32(1);
+            //            Console.WriteLine($"{price}: {count}");
+            //        }
+            //    }
+            //}
+            #endregion
+
+            #region dapper替代上面的原生写法
+            using MyDbContext ctx = new MyDbContext();
+            DbConnection con = ctx.Database.GetDbConnection();
+
+            IEnumerable<GroupArticlesByPrice>? res = con.Query<GroupArticlesByPrice>("select Price,Count(*) PCount from T_Articles group by Price");
+            foreach (GroupArticlesByPrice item in res)
+            {
+                Console.WriteLine(item.Price + ": " + item.PCount);
+            }
+            #endregion
+        }
+
+        /// <summary>
+        /// EF Core的非查询语句
+        /// </summary>
+        static async Task Main2(string[] args)
         {
             using MyDbContext ctx = new MyDbContext();
             // 1、执行非查询语句之外的所有语句：ExecuteSqlInterpolatedAsync()
