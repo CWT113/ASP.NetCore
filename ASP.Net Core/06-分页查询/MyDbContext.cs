@@ -21,7 +21,7 @@ namespace _06_分页查询
             optionsBuilder.UseSqlServer(connectionString);
 
             //打印日志
-            //optionsBuilder.LogTo(Console.WriteLine);
+            optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

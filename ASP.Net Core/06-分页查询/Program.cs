@@ -4,10 +4,24 @@ namespace _06_分页查询
 {
     internal class Program
     {
+        /// <summary>
+        /// EF Core的非查询语句
+        /// </summary>
         static async Task Main(string[] args)
         {
-            //PriatPage(1, 3);
+            // 1、执行非查询语句之外的所有语句：ExecuteSqlInterpolatedAsync()
+            int index = 7;
+            string str = "王一博，你好";
+
             using MyDbContext ctx = new MyDbContext();
+            await ctx.Database.ExecuteSqlInterpolatedAsync(
+                $"insert into T_Articles(Title, Message, Price) select Title, {str}, Price from T_Articles where Id = {index}");
+        }
+
+        static async Task Main1(string[] args)
+        {
+            //PriatPage(1, 3);
+            //using MyDbContext ctx = new MyDbContext();
 
             #region IQueryable读取数据的两种方法
             // 1、IQueryable分批从数据库读取数据；（内存占用小，数据库连接时间长）
