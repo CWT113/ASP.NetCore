@@ -10,8 +10,8 @@ namespace _06_分页查询
         static async Task Main(string[] args)
         {
             // 1、执行非查询语句之外的所有语句：ExecuteSqlInterpolatedAsync()
-            int index = 7;
-            string str = "王一博，你好";
+            int index = 10;
+            string str = "sunny看见陈伟霆了";
 
             using MyDbContext ctx = new MyDbContext();
             await ctx.Database.ExecuteSqlInterpolatedAsync(
