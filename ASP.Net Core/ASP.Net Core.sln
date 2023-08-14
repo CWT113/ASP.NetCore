@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-分页查询", "06-分�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-跟踪快照", "07-跟踪快照\07-跟踪快照.csproj", "{7B0A6A3E-38C5-40E0-A1E3-3FD2BCC3AB2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-MySQL并发控制", "08-MySQL并发控制\08-MySQL并发控制.csproj", "{516161C4-3E6B-4CDB-8F0D-BE28D7796452}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{7B0A6A3E-38C5-40E0-A1E3-3FD2BCC3AB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0A6A3E-38C5-40E0-A1E3-3FD2BCC3AB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0A6A3E-38C5-40E0-A1E3-3FD2BCC3AB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516161C4-3E6B-4CDB-8F0D-BE28D7796452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516161C4-3E6B-4CDB-8F0D-BE28D7796452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516161C4-3E6B-4CDB-8F0D-BE28D7796452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516161C4-3E6B-4CDB-8F0D-BE28D7796452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{98D02A28-83B2-43AD-9340-082FDD64E149} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
 		{F1E9E191-532B-4A11-9A10-C13D7CC5857E} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
 		{7B0A6A3E-38C5-40E0-A1E3-3FD2BCC3AB2A} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
+		{516161C4-3E6B-4CDB-8F0D-BE28D7796452} = {738B107A-55D5-495B-8E91-777EDA0F55CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4ED826D4-EB60-47AD-A98C-2F54BF6CCA93}
