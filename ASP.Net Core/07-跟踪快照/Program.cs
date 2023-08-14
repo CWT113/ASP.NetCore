@@ -44,13 +44,30 @@ namespace _07_跟踪快照
 
             #region 取消快照跟踪
             //什么时候用？当我们通过DBContext查询出来的内容不做修改，只是展示时，就可以通过 AsNoTracking() 方法来取消快照跟踪。
-            Article[] res = ctx.Articles.AsNoTracking().Take(3).ToArray();
-            foreach (Article item in res)
-            {
-                Console.WriteLine(item.Message);
-            }
+            //Article[] res = ctx.Articles.AsNoTracking().Take(3).ToArray();
+            //foreach (Article item in res)
+            //{
+            //    Console.WriteLine(item.Message);
+            //}
 
-            Console.WriteLine(ctx.Entry(res[0]).State);//Detached
+            //Console.WriteLine(ctx.Entry(res[0]).State);//Detached
+            #endregion
+
+            #region 跟踪快照的“小技巧”（不推荐使用）
+            // 1、将查询和更新合并为一句sql
+            //Article a = new Article { Id = 5, Price = 7890 };
+            //EntityEntry entry = ctx.Entry(a);
+            //entry.Property("Price").IsModified = true;//将其状态手动设置为 true
+
+            //Console.WriteLine(ctx.Entry(a).State);
+            //Console.WriteLine(entry.DebugView.LongView);
+
+            //ctx.SaveChanges();
+
+            // 2、将查询和删除合并为一句sql
+            //Article a = new Article { Id = 24588 };
+            //ctx.Entry(a).State = EntityState.Deleted;//将其手动设置为 Deleted
+            //ctx.SaveChanges();
             #endregion
         }
     }
