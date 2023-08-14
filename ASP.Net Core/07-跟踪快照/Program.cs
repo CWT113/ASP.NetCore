@@ -69,6 +69,29 @@ namespace _07_跟踪快照
             //ctx.Entry(a).State = EntityState.Deleted;//将其手动设置为 Deleted
             //ctx.SaveChanges();
             #endregion
+
+            #region 全局查询筛选器
+            // 1、将第一条软删除
+            //Article res = ctx.Articles.Single(d => d.Id == 1);
+            //res.IsDeleted = true;
+            //ctx.SaveChanges();
+
+            // 2、在 ArticlesConfig 中设置全局查询筛选器
+            //var res = ctx.Articles.Where(d => d.Id >= 1).Take(4);
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item.Id + ": " + item.Title);
+            //}
+            #endregion
+
+            #region 忽略全局筛选过滤器
+            // 3、忽略全局筛选过滤器
+            //var res = ctx.Articles.IgnoreQueryFilters().Where(d => d.IsDeleted == true);
+            //foreach (var item in res)
+            //{
+            //    Console.WriteLine(item.Id + ": " + item.Title);
+            //}
+            #endregion
         }
     }
 }

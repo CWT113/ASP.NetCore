@@ -12,6 +12,9 @@ namespace _07_跟踪快照
             //设置字段在数据库中的属性
             builder.Property(x => x.Title).HasMaxLength(100).IsUnicode().IsRequired();
             builder.Property(x => x.Message).IsUnicode().IsRequired();
+
+            // 全局过滤筛选器
+            builder.HasQueryFilter(d => d.IsDeleted == false);
         }
     }
 }
