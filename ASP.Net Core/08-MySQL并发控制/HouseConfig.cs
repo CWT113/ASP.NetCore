@@ -11,6 +11,9 @@ namespace _08_MySQL并发控制
             builder.Property(d => d.Name).IsRequired();
             //设置乐观并发控制令牌
             //builder.Property(d => d.Owner).IsConcurrencyToken();
+
+            //多乐观并发控制
+            builder.Property(d => d.RowVersion).IsRowVersion();
         }
     }
 }

@@ -11,5 +11,8 @@ namespace _08_MySQL并发控制
         public long Id { get; set; }
         public string Name { get; set; }
         public string Owner { get; set; }
+
+        //多乐观并发控制字段
+        public byte[] RowVersion { get; set; }
     }
 }
