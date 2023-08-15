@@ -15,10 +15,15 @@ namespace _08_MySQL并发控制
         {
             base.OnConfiguring(optionsBuilder);
             //MySql的连接字符串
-            string connectionString = "server=localhost;user=root;password=1234;database=test";
-            MySqlServerVersion serverVersion = new MySqlServerVersion(new Version(8, 0, 31));
+            //string connectionString = "server=localhost;user=root;password=1234;database=test";
+            //MySqlServerVersion serverVersion = new MySqlServerVersion(new Version(8, 0, 31));
+            //optionsBuilder.UseMySql(connectionString, serverVersion);
 
-            optionsBuilder.UseMySql(connectionString, serverVersion);
+            //sqlserver连接字符串
+            string connectionString =
+                "Data Source=LENOVO\\SQLSERVER;Initial Catalog=demo6;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+            optionsBuilder.UseSqlServer(connectionString);
+
             //optionsBuilder.LogTo(Console.WriteLine);
         }
 
