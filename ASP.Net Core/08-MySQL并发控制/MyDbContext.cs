@@ -19,6 +19,7 @@ namespace _08_MySQL并发控制
             MySqlServerVersion serverVersion = new MySqlServerVersion(new Version(8, 0, 31));
 
             optionsBuilder.UseMySql(connectionString, serverVersion);
+            //optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

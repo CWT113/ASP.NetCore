@@ -9,6 +9,8 @@ namespace _08_MySQL并发控制
         {
             builder.ToTable("T_Houses");
             builder.Property(d => d.Name).IsRequired();
+            //设置乐观并发控制令牌
+            builder.Property(d => d.Owner).IsConcurrencyToken();
         }
     }
 }
