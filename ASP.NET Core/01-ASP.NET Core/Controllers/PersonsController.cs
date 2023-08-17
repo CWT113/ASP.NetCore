@@ -78,5 +78,19 @@ namespace _01_ASP.NET_Core.Controllers
                     return NotFound("请输入正确的Id字段!");
             }
         }
+
+        //捕捉URL占位符（参数名称原则上和url占位符相同）
+        [HttpGet("student/{school}/class/{id}")]
+        public dynamic GetStudent(string school, int id)
+        {
+            return new { id, school };
+        }
+
+        //捕捉URL占位符（参数名称不和url占位符相同，使用FromRoute解决）
+        [HttpGet("student/{school}/class/{id}")]
+        public dynamic GetStudent1(string school, [FromRoute(Name = "id")] int MyID)
+        {
+            return new { MyID, school };
+        }
     }
 }
