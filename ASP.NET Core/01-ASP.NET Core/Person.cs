@@ -1,4 +1,4 @@
 ﻿namespace _01_ASP.NET_Core
 {
-   public record Person(string Name, int Age);
+    public record Person(long Id, string Name, int Age);
 }

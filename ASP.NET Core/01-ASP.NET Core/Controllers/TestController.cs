@@ -3,14 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace _01_ASP.NET_Core.Controllers
 {
-    [Route("api/[controller]")]
+    //RPC风格
+    [Route("[controller]/[action]")]
     [ApiController]
     public class TestController : ControllerBase
     {
         [HttpGet]
         public Person GetPerson()
         {
-            return new Person("王一博", 18);
+            return new Person(1,"王一博", 18);
         }
 
         [HttpPost]
