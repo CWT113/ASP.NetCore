@@ -40,5 +40,43 @@ namespace _01_ASP.NET_Core.Controllers
         {
             return person;
         }
+
+        //异步方法
+        [HttpGet]
+        public async Task<string> ReadTxt()
+        {
+            string text = await System.IO.File.ReadAllTextAsync(@"E:\projects\ASP.NET Core\test.txt");
+            return text;
+        }
+
+        //IActionResult
+        [HttpGet]
+        public IActionResult GetSorce(int Id)
+        {
+            switch (Id)
+            {
+                case 1:
+                    return Ok(99);
+                case 2:
+                    return Ok(66);
+                default:
+                    return NotFound("请输入正确的Id字段!");
+            }
+        }
+
+        //泛型的ActionResult
+        [HttpGet]
+        public ActionResult<int> GetSorce1(long Id)
+        {
+            switch (Id)
+            {
+                case 1:
+                    return 100;
+                case 2:
+                    return 66;
+                default:
+                    return NotFound("请输入正确的Id字段!");
+            }
+        }
     }
 }
