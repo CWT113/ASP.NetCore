@@ -92,5 +92,12 @@ namespace _01_ASP.NET_Core.Controllers
         {
             return new { MyID, school };
         }
+
+        //Id展示在URL中，更新内容存储在请求体中
+        [HttpPut("Id")]
+        public Person UpdatePerson([FromRoute]int Id , Person person)
+        {
+            return person;
+        }
     }
 }

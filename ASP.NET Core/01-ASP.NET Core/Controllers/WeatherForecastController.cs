@@ -18,7 +18,7 @@ namespace _01_ASP.NET_Core.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "aaa")]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
