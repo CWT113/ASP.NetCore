@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-缓存", "03-缓存\03-缓存.csproj", "{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
