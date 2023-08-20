@@ -1,4 +1,5 @@
 using _02_前后端分离.Controllers;
+using Zack.Commons;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,10 @@ builder.Services.AddSwaggerGen();
 
 //注入Calculate类
 builder.Services.AddScoped<Calculate>();
+
+//使用 Zack.commons 实现各自的依赖注入
+var asms = ReflectionHelper.GetAllReferencedAssemblies();
+builder.Services.RunModuleInitializers(asms);
 
 //后端配置跨域
 builder.Services.AddCors(options =>
