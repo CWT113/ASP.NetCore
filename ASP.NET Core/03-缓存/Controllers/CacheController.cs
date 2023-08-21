@@ -29,8 +29,14 @@ namespace _03_缓存.Controllers
                 //e.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(10);
 
                 //滑动过期时间（在10秒内，再次从缓存中获取数据时，缓存有效期再加10秒【无限续命，再奶一口】）
-                e.SlidingExpiration = TimeSpan.FromSeconds(10);
-                return await MyDbContext.GetBookAsync(Id);
+                //e.SlidingExpiration = TimeSpan.FromSeconds(10);
+                
+                //缓存穿透：当我们查询一个数据库中不存在的数据时，请求会先去缓存中查看，没有缓存再去数据库获取，而数据库也没有数据。
+                //        此时查询对于数据库的压力就会变得非常大，而这就会构成缓存穿透。
+                //解决方案：当数据库查询不到数据时，返回值设置为null，存储到缓存中，下次请求直接返回null即可（缓存中允许存储null值）。
+                Books? d = await MyDbContext.GetBookAsync(Id);
+                Console.WriteLine("从数据库中查询的结果是" + (d == null ? "null" : d));
+                return d;
             });
             Console.WriteLine($"GetOrCreateAsync的结果是{res}");
             if (res == null)
