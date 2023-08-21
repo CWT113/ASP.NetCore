@@ -20,6 +20,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+//ÉèÖÃ·şÎñÆ÷¶Ë»º´æ
+app.UseResponseCaching();
+
 app.MapControllers();
 
 app.Run();
