@@ -25,6 +25,11 @@ namespace _03_缓存.Controllers
             var res = await memoryCache.GetOrCreateAsync("Book" + Id, async (e) =>
             {
                 Console.WriteLine($"缓存中没有，从数据库中去取");
+                //绝对过期时间（10秒）
+                //e.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(10);
+
+                //滑动过期时间（在10秒内，再次从缓存中获取数据时，缓存有效期再加10秒【无限续命，再奶一口】）
+                e.SlidingExpiration = TimeSpan.FromSeconds(10);
                 return await MyDbContext.GetBookAsync(Id);
             });
             Console.WriteLine($"GetOrCreateAsync的结果是{res}");
