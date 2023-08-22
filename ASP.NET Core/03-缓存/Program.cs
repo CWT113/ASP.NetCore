@@ -15,6 +15,13 @@ builder.Services.AddMemoryCache();
 //注册Zack.ASPNETCORE中封装的 IMemoryCacheHelper 类
 builder.Services.AddScoped<IMemoryCacheHelper, MemoryCacheHelper>();
 
+//注册redis
+builder.Services.AddStackExchangeRedisCache(option =>
+{
+    option.Configuration = "localhost";
+    option.InstanceName = "wyb_";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

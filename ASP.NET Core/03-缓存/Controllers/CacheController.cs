@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Text.Json;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Caching.Memory;
 using Zack.ASPNETCore;
 
@@ -11,11 +13,13 @@ namespace _03_缓存.Controllers
     {
         private readonly IMemoryCache memoryCache;
         private readonly IMemoryCacheHelper memoryCacheHelper;
+        private readonly IDistributedCache distributedCache;
 
-        public CacheController(IMemoryCache memoryCache, IMemoryCacheHelper memoryCacheHelper)
+        public CacheController(IMemoryCache memoryCache, IMemoryCacheHelper memoryCacheHelper, IDistributedCache distributedCache)
         {
             this.memoryCache = memoryCache;
             this.memoryCacheHelper = memoryCacheHelper;
+            this.distributedCache = distributedCache;
         }
 
         [HttpGet]
@@ -80,6 +84,39 @@ namespace _03_缓存.Controllers
             else
             {
                 return res;
+            }
+        }
+
+        /// <summary>
+        /// 通过redis设置缓存
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<ActionResult<Books?>> Test2Async(long Id)
+        {
+            Books? books;
+            string? res = await distributedCache.GetStringAsync("Book" + Id);
+            if (res ==null)
+            {
+                Console.WriteLine($"从数据库中取Id = {Id}");
+                books = await MyDbContext.GetBookAsync(Id);
+                //注意：SetStringAsync方法是以键值对的形式再缓存中存储的。
+                await distributedCache.SetStringAsync("Book" + Id, JsonSerializer.Serialize(books));
+            }
+            else
+            {
+                Console.WriteLine($"从缓存中取Id = {Id}");
+                books = JsonSerializer.Deserialize<Books?>(res);
+            }
+
+            if (books == null)
+            {
+                return NotFound("不存在查询的书");
+            }
+            else
+            {
+                return books;
             }
         }
     }
