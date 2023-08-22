@@ -22,6 +22,9 @@ builder.Services.AddStackExchangeRedisCache(option =>
     option.InstanceName = "wyb_";
 });
 
+//注册Zack.ASPNETCORE中封装的 IDistributedCacheHelper 类
+builder.Services.AddScoped<IDistributedCacheHelper, DistributedCacheHelper>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

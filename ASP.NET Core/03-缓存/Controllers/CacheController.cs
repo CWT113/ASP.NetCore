@@ -14,12 +14,14 @@ namespace _03_缓存.Controllers
         private readonly IMemoryCache memoryCache;
         private readonly IMemoryCacheHelper memoryCacheHelper;
         private readonly IDistributedCache distributedCache;
+        private readonly IDistributedCacheHelper distributedCacheHelper;
 
-        public CacheController(IMemoryCache memoryCache, IMemoryCacheHelper memoryCacheHelper, IDistributedCache distributedCache)
+        public CacheController(IMemoryCache memoryCache, IMemoryCacheHelper memoryCacheHelper, IDistributedCache distributedCache, IDistributedCacheHelper distributedCacheHelper)
         {
             this.memoryCache = memoryCache;
             this.memoryCacheHelper = memoryCacheHelper;
             this.distributedCache = distributedCache;
+            this.distributedCacheHelper = distributedCacheHelper;
         }
 
         [HttpGet]
@@ -119,5 +121,23 @@ namespace _03_缓存.Controllers
                 return books;
             }
         }
+
+        //[HttpGet]
+        //public async Task<ActionResult<Books?>> Test3Async(long Id)
+        //{
+        //    Books? books = await distributedCacheHelper.GetOrCreateAsync("Book" + Id, async (e) =>
+        //    {
+        //        return await MyDbContext.GetBookAsync(Id);
+        //    }, 20);
+
+        //    if (books == null)
+        //    {
+        //        return NotFound("不存在查询的书");
+        //    }
+        //    else
+        //    {
+        //        return books;
+        //    }
+        //}
     }
 }
