@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Zack.ASPNETCore" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

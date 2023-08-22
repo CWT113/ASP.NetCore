@@ -1,3 +1,5 @@
+using Zack.ASPNETCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +11,9 @@ builder.Services.AddSwaggerGen();
 
 //注册内存缓存
 builder.Services.AddMemoryCache();
+
+//注册Zack.ASPNETCORE中封装的 IMemoryCacheHelper 类
+builder.Services.AddScoped<IMemoryCacheHelper, MemoryCacheHelper>();
 
 var app = builder.Build();
 
