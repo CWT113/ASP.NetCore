@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-前后端分离", "02-�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-测试依赖注入", "01-测试依赖注入", "{9390ED62-C94A-4C4C-9437-8A4C67E46BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{273AB7ED-A13A-4A33-B05D-D8B8282CE751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{273AB7ED-A13A-4A33-B05D-D8B8282CE751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-缓存", "03-缓存\03-缓存.csproj", "{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-缓存", "03-缓存\03-缓存.csproj", "{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-环境变量", "04-环境变量\04-环境变量.csproj", "{3B5865E9-47BF-4E56-BDA3-415C80426718}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
