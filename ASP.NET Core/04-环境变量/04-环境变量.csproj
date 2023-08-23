@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>_04_环境变量</RootNamespace>
+    <UserSecretsId>ac183453-975b-4179-8f93-fb1a1491ddd9</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

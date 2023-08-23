@@ -15,7 +15,7 @@ namespace _04_环境变量
 
             var app = builder.Build();
 
-            //Console.WriteLine(app.Environment.EnvironmentName);//Development
+            Console.WriteLine(app.Environment.EnvironmentName);//Development
 
             //判断当前环境是否是 开发环境，开发环境下才启用 swagger
             if (app.Environment.IsDevelopment())
@@ -23,6 +23,10 @@ namespace _04_环境变量
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            //读取本地配置的 secrets.json 中的配置
+            string? constr = app.Configuration.GetSection("connectionString").Value;
+            Console.WriteLine(constr);
 
             app.UseHttpsRedirection();
 
