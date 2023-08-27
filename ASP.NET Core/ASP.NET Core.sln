@@ -15,9 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary2", "ClassLibra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-缓存", "03-缓存\03-缓存.csproj", "{12A51EC6-FF68-468A-B46C-06F1DEBD23C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-环境变量", "04-环境变量\04-环境变量.csproj", "{3B5865E9-47BF-4E56-BDA3-415C80426718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-环境变量", "04-环境变量\04-环境变量.csproj", "{3B5865E9-47BF-4E56-BDA3-415C80426718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-综合配置集成1", "05-综合配置集成1\05-综合配置集成1.csproj", "{3DFBBED1-8898-4194-9899-63E62D0FED06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-综合配置集成1", "05-综合配置集成1\05-综合配置集成1.csproj", "{3DFBBED1-8898-4194-9899-63E62D0FED06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-多层项目中的分层", "06-多层项目中的分层\06-多层项目中的分层.csproj", "{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06-多层项目分层类库", "06-多层项目分层类库", "{CBC48488-B6D1-4E5F-A5E2-75BFE4D88ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreBook", "EFCoreBook\EFCoreBook.csproj", "{047A58F6-0441-4638-87FD-5587EB8E64CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,14 @@ Global
 		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +74,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{273AB7ED-A13A-4A33-B05D-D8B8282CE751} = {9390ED62-C94A-4C4C-9437-8A4C67E46BA3}
 		{ED7DFD99-50C1-40EC-8F47-9114C9DE0CFB} = {9390ED62-C94A-4C4C-9437-8A4C67E46BA3}
+		{047A58F6-0441-4638-87FD-5587EB8E64CC} = {CBC48488-B6D1-4E5F-A5E2-75BFE4D88ACD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F1977258-E257-4B19-8658-F098118DE25D}
