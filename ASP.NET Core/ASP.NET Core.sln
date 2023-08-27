@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-缓存", "03-缓存\03-�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-环境变量", "04-环境变量\04-环境变量.csproj", "{3B5865E9-47BF-4E56-BDA3-415C80426718}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-综合配置集成1", "05-综合配置集成1\05-综合配置集成1.csproj", "{3DFBBED1-8898-4194-9899-63E62D0FED06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B5865E9-47BF-4E56-BDA3-415C80426718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFBBED1-8898-4194-9899-63E62D0FED06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
