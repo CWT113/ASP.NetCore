@@ -12,6 +12,7 @@ namespace _07_充血模型
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Entity> Entities { get; set; }
+        public DbSet<Shop> Shop { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
