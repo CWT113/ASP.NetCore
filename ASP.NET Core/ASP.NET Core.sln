@@ -19,11 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-环境变量", "04-环�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-综合配置集成1", "05-综合配置集成1\05-综合配置集成1.csproj", "{3DFBBED1-8898-4194-9899-63E62D0FED06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-多层项目中的分层", "06-多层项目中的分层\06-多层项目中的分层.csproj", "{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-多层项目中的分层", "06-多层项目中的分层\06-多层项目中的分层.csproj", "{F86BDFD0-3821-4A2C-8BEE-21B0A57FEB5C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06-多层项目分层类库", "06-多层项目分层类库", "{CBC48488-B6D1-4E5F-A5E2-75BFE4D88ACD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreBook", "EFCoreBook\EFCoreBook.csproj", "{047A58F6-0441-4638-87FD-5587EB8E64CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreBook", "EFCoreBook\EFCoreBook.csproj", "{047A58F6-0441-4638-87FD-5587EB8E64CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-充血模型", "07-充血模型\07-充血模型.csproj", "{2441F3E8-3420-4950-8652-D88DD4722535}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{047A58F6-0441-4638-87FD-5587EB8E64CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2441F3E8-3420-4950-8652-D88DD4722535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2441F3E8-3420-4950-8652-D88DD4722535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2441F3E8-3420-4950-8652-D88DD4722535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2441F3E8-3420-4950-8652-D88DD4722535}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
