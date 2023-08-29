@@ -11,6 +11,7 @@ namespace _07_充血模型
     public class MyDBContext:DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Entity> Entities { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
