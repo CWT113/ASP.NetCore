@@ -1,5 +1,6 @@
 using ActionFilter;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,11 @@ builder.Services.Configure<MvcOptions>(option =>
 {
     option.Filters.Add<ActionFilters>();
     option.Filters.Add<ActionFilters2>();
+});
+
+builder.Services.AddDbContext<MyDBContext>(option =>
+{
+    option.UseSqlServer("Data Source=LENOVO\\SQLSERVER;Initial Catalog=Demo10;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
 });
 
 var app = builder.Build();
