@@ -15,6 +15,7 @@ builder.Services.Configure<MvcOptions>(option =>
 {
     option.Filters.Add<ActionFilters>();
     option.Filters.Add<ActionFilters2>();
+    option.Filters.Add<TransactionScopeFilter>();
 });
 
 builder.Services.AddDbContext<MyDBContext>(option =>

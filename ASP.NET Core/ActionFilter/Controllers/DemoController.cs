@@ -16,6 +16,7 @@ public class DemoController : ControllerBase
 
     [HttpPost]
     [Route("Add")]
+    [NotTransaction]//不进行事务控制
     public string Add()
     {
         using TransactionScope tx = new TransactionScope();
@@ -34,6 +35,7 @@ public class DemoController : ControllerBase
 
     [HttpPost]
     [Route("AddAsync")]
+    [NotTransaction]//不进行事务控制
     public async Task<string> AddAsync()
     {
         using TransactionScope tx = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
@@ -46,6 +48,21 @@ public class DemoController : ControllerBase
         await ctx.SaveChangesAsync();
         //没有Complete()，事务也会回滚
         tx.Complete();
+
+        return "OK";
+    }
+
+    [HttpPost]
+    [Route("AddAsync1")]
+    public async Task<string> AddAsync1()
+    {
+        Book book1 = new Book { Name = "aa", Price = 9.9 };
+        ctx.books.Add(book1);
+        await ctx.SaveChangesAsync();
+
+        Person person1 = new Person { Name = "莎123123123", Age = 99 };
+        ctx.people.Add(person1);
+        await ctx.SaveChangesAsync();
 
         return "OK";
     }
