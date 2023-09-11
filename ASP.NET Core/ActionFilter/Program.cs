@@ -10,9 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMemoryCache();
 
 builder.Services.Configure<MvcOptions>(option =>
 {
+    option.Filters.Add<RateLimitFilter>();
     option.Filters.Add<ActionFilters>();
     option.Filters.Add<ActionFilters2>();
     option.Filters.Add<TransactionScopeFilter>();
