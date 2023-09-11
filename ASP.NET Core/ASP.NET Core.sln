@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SenderWebAPI", "SenderWebAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumerWebAPI", "ConsumerWebAPI\ConsumerWebAPI.csproj", "{4493EE67-1854-4F13-B5E5-12E28FC6992F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filter", "Filter\Filter.csproj", "{B30E8944-B3CE-49C5-BFF9-DE09153FDF93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Filter", "Filter\Filter.csproj", "{B30E8944-B3CE-49C5-BFF9-DE09153FDF93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionFilter", "ActionFilter\ActionFilter.csproj", "{FC06E2AF-F00C-4051-9415-E20E17B32D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionFilter", "ActionFilter\ActionFilter.csproj", "{FC06E2AF-F00C-4051-9415-E20E17B32D12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "中间件", "中间件\中间件.csproj", "{CA7156F3-CBCC-48B7-8AE4-BB641D497337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,10 @@ Global
 		{FC06E2AF-F00C-4051-9415-E20E17B32D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC06E2AF-F00C-4051-9415-E20E17B32D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC06E2AF-F00C-4051-9415-E20E17B32D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7156F3-CBCC-48B7-8AE4-BB641D497337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7156F3-CBCC-48B7-8AE4-BB641D497337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7156F3-CBCC-48B7-8AE4-BB641D497337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7156F3-CBCC-48B7-8AE4-BB641D497337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
