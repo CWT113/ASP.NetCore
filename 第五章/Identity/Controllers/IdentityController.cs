@@ -75,4 +75,34 @@ public class IdentityController : ControllerBase
             return BadRequest("用户名或密码错误！");
         }
     }
+
+    [HttpPost]
+    [Route("SendResetPasswordToken")]
+    public async Task<ActionResult> SendResetPasswordToken(string userName)
+    {
+        MyUser? user = await userManager.FindByNameAsync(userName);
+        if (user == null) return BadRequest("用户不存在");
+        string token = await userManager.GeneratePasswordResetTokenAsync(user);
+        Console.WriteLine($"token是：" + token);
+        return Ok();
+    }
+
+    [HttpPut]
+    [Route("ResetPassword")]
+    public async Task<ActionResult> ResetPassword(string userName, string token, string newPassword)
+    {
+        MyUser? user = await userManager.FindByNameAsync(userName);
+        if (user == null) return BadRequest("用户不存在");
+        IdentityResult? result =  await userManager.ResetPasswordAsync(user, token, newPassword);
+        if (result.Succeeded)
+        {
+            await userManager.ResetAccessFailedCountAsync(user);
+            return Ok("密码重置成功！");
+        }
+        else
+        {
+            await userManager.ResetAccessFailedCountAsync(user);
+            return BadRequest("密码重置失败！");
+        }
+    }
 }

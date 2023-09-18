@@ -25,6 +25,8 @@ builder.Services.AddIdentityCore<MyUser>(option =>
     option.Password.RequireUppercase = false;
     option.Password.RequireDigit = false;
     option.Password.RequiredLength = 6;
+    //配置是否启用邮件形式，邮件形式的token特别长，此处不启用
+    option.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultEmailProvider;
 });
 IdentityBuilder identityBuilder = new IdentityBuilder(typeof(MyUser), typeof(MyRole), builder.Services);
 identityBuilder.AddEntityFrameworkStores<MyDbcontext>()
