@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "生成JWT", "生成JWT\生�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWT解码", "JWT解码\JWT解码.csproj", "{ACB89D96-2406-4A20-9CD9-11DC27C13919}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT封装", "JWT封装\JWT封装.csproj", "{DF19D13A-1A11-4667-A0AB-AFFABD0F3525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWT封装", "JWT封装\JWT封装.csproj", "{DF19D13A-1A11-4667-A0AB-AFFABD0F3525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "托管服务", "托管服务\托管服务.csproj", "{836A4999-CEC1-4692-9E66-63C57BBC4158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DF19D13A-1A11-4667-A0AB-AFFABD0F3525}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF19D13A-1A11-4667-A0AB-AFFABD0F3525}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF19D13A-1A11-4667-A0AB-AFFABD0F3525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836A4999-CEC1-4692-9E66-63C57BBC4158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836A4999-CEC1-4692-9E66-63C57BBC4158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836A4999-CEC1-4692-9E66-63C57BBC4158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836A4999-CEC1-4692-9E66-63C57BBC4158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
