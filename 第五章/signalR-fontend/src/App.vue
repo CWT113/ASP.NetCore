@@ -26,7 +26,13 @@ const txtMsgOnkeypress = async (e) => {
 
 onMounted(async () => {
   connection = new signalR.HubConnectionBuilder()
-    .withUrl("https://localhost:7167/myhub")
+    // 不禁用协商
+    // .withUrl("https://localhost:7167/myhub")
+    // SignalR的协商协议 -- 禁用协商
+    .withUrl("https://localhost:7167/myhub", {
+      skipNegotiation: true,
+      transport: signalR.HttpTransportType.WebSockets
+    })
     .withAutomaticReconnect()
     .build();
   await connection.start();
